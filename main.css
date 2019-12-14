@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans');
+* {
+  box-sizing: border-box;
+  font-family: 'Nunito Sans', sans-serif;
+}
+/* Create three equal columns that floats next to each other */
+#canvas-area{
+  background-color: #ACD8F9;
+  background-image: linear-gradient(#ACD8F9, white);
+}
+.column {
+  float: left;
+  width: 40%;
+  padding: 3px;
+  /*column-gap: 40px;*/
+  border: 1px solid #2196F3;
+  /*border-radius: 5%;*/
+  background-color: #acd8f9;
+}
+.column-canvas{
+  float: right;
+  width:60%;
+  padding 3px;
+  border: 1px solid #2196F3;
+}
+/* Create three equal columns that floats next to each other */
+
+
+.no-drop {cursor: no-drop;}
+.default {cursor: default;}
+
+.option-button{
+    background-color: white;
+    margin-right: 5px;
+    margin-top: 5px;
+    padding: 5px;
+    font-size: 13px;
+    width: 20%;
+    color: black;
+    border: 2px solid #2196F3;
+    cursor: pointer;
+}
+.option-button-steps{
+    background-color: #CCCCCC;
+    margin-right: 5px;
+    margin-top: 5px;
+    padding: 5px;
+    font-size: 15px;
+    font-weight: bolder;
+    width: 15%;
+    color: black;
+    border: 2px solid #CCCCCC;
+}
+.option-button:hover{
+    background-color: #2196F3 ;
+    margin-right: 10px;
+    margin-top: 10px;
+    padding: 5px;
+    font-size: 10px;
+    width: 22%;
+    color: white;
+    font-weight: bold;
+    border: 2px solid #2196F3; /* Green */
+    cursor: pointer;
+}
+
+.option-button-small{
+    background-color: white;
+    margin-right: 5px;
+    margin-top: 5px;
+    padding: 2px;
+    font-size: 13px;
+    width: 10%;
+    color: black;
+    border: 2px solid #2196F3;
+    cursor: pointer;
+}
+.option-button-small:hover{
+    background-color: #2196F3;
+    margin-right: 5px;
+    margin-top: 5px;
+    padding: 2px;
+    font-size: 14px;
+    width: 10%;
+    color: black;
+    border: 2px solid #2196F3;
+    cursor: pointer;
+}
+.label {
+  color: white;
+  padding: 5px;
+}
+.info {background-color: #2196F3;} /* Blue */
+
+/*Dropdown Styling*/
+select.dropdown {
+    background: aliceblue;
+    font-weight: 600;
+    padding: 5px;
+}
+
+span#print_p1 {
+    background-color: yellow;
+    font-weight: bolder;
+}
+span#print_p2 {
+    background-color: yellow;
+    font-weight: bolder;
+}
+span#print_p3 {
+    background-color: #8ddba7;
+    font-weight: bolder;
+}

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Singly Linked List</title>
+    <link rel="stylesheet" href="main.css" type="text/css">
+    <link rel="stylesheet" href="questions.css" type="text/css">
+    <header style="text-align: center">
+    <h2>  Addition of two polynomials</h2>
+      <!--  <input class="option-button" type="button" value="Start Simulator" style="font-size: 20px;width: 100%;" onclick="start_simulator(this)">
+ -->   <input class="option-button-steps" type="button" value="Step 1 >>" id="step1" style="background-color: #2196F3; border: 1px solid #2196F3;">
+      <input class="option-button-steps" type="button" value="Step 2 >>" id="step2">
+      <input class="option-button-steps" type="button" value="Step 3 >>" id="step3">
+      <input class="option-button-steps" type="button" value="Step 4 >>" id="step4">
+      <input class="option-button-steps" type="button" value="Finish!" id="step5" onclick="x2();" disabled>
+      <span style="text-align: left; float: right; font-size: 15px;">Version 1.0.0</span>
+      <br />
+    </header>
+  </head>
+  <body>
+
+    <div class="row" style="padding: 10px 10px 10px 10px;" id="starting" >
+      <div class="column" style="padding: 10px; ">
+
+        <div id="q_a_s" style="display:block;border-radius: 0%">
+            <div id="question_1">
+              <p class="label info">Q1. What are the Memory Allocation Functions in C? <br /><b>(Multiple Answers Expected)</b> </p>
+              <form>
+                A)<input type="checkbox" name="o1" value="malloc()" onchange="doif(this)"> <span class="checkmark">malloc()</span><br>
+                B)<input type="checkbox" name="o2" value="free()"  onchange="doelse(this)"> free()<br>
+                C)<input type="checkbox" name="o3" value="calloc()" onchange="doif1(this)">  calloc()<br>
+                D)<input type="checkbox" name="o4" value="realloc()" onchange="doif2(this)"> realloc()<br><br>
+                <input class="option-button" type="button" value="Submit" onclick="x1()">
+                <input class="option-button" type="button" value="Reset" onclick="x2()">
+                <input class="option-button" id="next_ques1" type="button" value="Next Question" onclick="next_question(this);" name="1" style="display: none">
+                <br /><br /><span id="x1" style="border: ; padding: 3px; color: Green"></span>
+                <span id="x2" style="border: ; padding: 3px; color: red"></span>
+              </form>
+            </br><span id="y1" style="text-align:right;"></span>
+
+
+            </div>
+            <div id="question_2" style="display: none">
+              <p class="label info">Q2. Let "X" be any data-type (int, char, float etc.). Will the size of the Node vary with X? </p>
+              <pre>
+              struct Node
+                 {
+                      X data;
+                      struct node *Next;
+                 };
+                 struct Node *head;
+              </pre>
+              <input type="radio" name="o1" value="Yes" id="01" >Yes
+              <input type="radio" name="o1" value="No" id ="02" >No
+              <br /><input class="option-button" type="button" value="Submit" onclick="x11()">
+              <input class="option-button" type="button" value="Reset" onclick="x2()">
+              <input class="option-button" id="next_ques2" type="button" value="Next Question" onclick="next_question(this);" name="2" style="display: none">
+              <span id="x11" style="padding: 3px; color: Green"></span>
+            </div>
+
+            <div id="question_3" style="display: none">
+              <p class="label info">Q3. In linked list Implementation, a node carries information regarding </p>
+              A)<input type="radio" name="o1" value="Data" id="013" >Data<br>
+              B)<input type="radio" name="o1" value="Link" id ="023" >Link<br>
+              C)<input type="radio" name="o1" value="Data and Link" id="033">Data and Link<br>
+              D)<input type="radio" name="o1" value="None of the Mentioned" id="043">None of the Mentioned<br>
+              <br /><input class="option-button" type="button" value="Submit" onclick="x13()">
+              <input class="option-button" type="button" value="Reset" onclick="x2()">
+              <input class="option-button" id="next_ques3" type="button" value="Next Question" onclick="next_question(this);" name="3" style="display: none">
+              <span id="x13" style="padding: 3px; color: Green"></span>
+            </div>
+
+            <div id="question_4" style="display: none">
+              <p class="label info">Q4. In linked-list each node contain minimum of two fields. One field is to store and the data second field is for?</p>
+              A)<input type="radio" name="o1" value="Pointer to Character" id="014" >Pointer to Character<br>
+              B)<input type="radio" name="o1" value="Pointer to Integer" id ="024" >Pointer to Integer<br>
+              C)<input type="radio" name="o1" value="Pointer to Node" id="034">Pointer to Node<br>
+              D)<input type="radio" name="o1" value="None" id="044">None<br>
+              <br /><input class="option-button" type="button" value="Submit" onclick="x14()">
+              <input class="option-button" type="button" value="Reset" onclick="x2()">
+              <input class="option-button" id="next_ques4" type="button" value="Next >>" onclick="next_question(this);" name="4" style="display: none">
+              <span id="x14" style="padding: 3px; color: Green"></span>
+            </div>
+              <div id="question_5" style="display: none">
+                <p class="label info">
+                  Congrats! You have solved all the questions!<br /><br />
+                  Click on the <b>Start Simulator Button</b> to enable the simulator for <b>Polynomial Addition.</b>
+                </p>
+                <input class="option-button" type="button" value="Start Simulator" style="font-size: 20px;width: 100%;" onclick="start_simulator(this)">
+              </div>
+        </div>
+
+
+        <div id="hint1" style="display:none;">
+        <p class="label info"><b>Hint</b>
+          <ol start="A" type="A" start="border: 1px solid black">
+            <li><b>malloc()</b>-- Function allocates single block of memory.</li>
+            <li><b>free()</b>-- Function deallocates the memory.</li>
+            <li><b>calloc()</b>--Function gives contiguous memory allocation.</li>
+            <li><b>realloc()</b>-- Function reallocates the memory.</li>
+          </ol>
+        </div>
+        <div id="hint2" style="display:none;">
+        <p class="label info"><b>Hint</b></p>
+          Size of any variable varies with its data type.
+        </div>
+        <div id="hint3" style="display:none;">
+        <p class="label info"><b>Hint</b></p>
+          It carries Data and Address of next node.
+        </div>
+        <div id="hint4" style="display:none;">
+        <p class="label info"><b>Hint</b></p>
+          Node in link list requires a pointer field, pointing to the next node.
+        </div>
+        <div id="instructions" style="display: none">
+          <p class="label info">
+            General Instructions
+          </p>
+          <b>1)</b>&nbsp If <b>3x<sup>2</sup>+5x<sup>1</sup>+1x<sup>0</sup></b> is the equation, then <br /> &nbsp &nbsp <b> <span style="color: red">*</span> &nbsp 3, 5 and 1</b> are the Coefficients
+          <br /> &nbsp &nbsp <b> <span style="color: red">*</span> &nbsp 2, 1 and 0</b> are the Exponents
+          <br  /><b>2)</b>&nbsp Enter the coefficients and exponents one by one in the input fields.
+        </div>
+        <div id="polynomials" style="display: none"><p class="label info">
+          Inputs Entered:
+        </p>
+          <span id="display_p1" style="display: none"><b>1)</b> You have entered the following equations:
+              <br /> &nbsp&nbsp<b>(i)</b> &nbsp&nbspPolynomial (P) :
+              <span id="print_p1"></span>
+          </span><br />
+          <span id="display_p2" style="display: none">&nbsp&nbsp<b>(i)</b> &nbsp&nbspPolynomial (Q) :
+              <span id="print_p2"></span>
+          </span><br />
+          <span id="display_p3" style="display: none"><b>Resultant Polynomial: </b>
+          <br />    <span id="print_p3"></span>
+          </span>
+        </div>
+        <div id="f_p_s" style="display:none;border-radius: 0%">
+          <p class="label info"><b>First Polynomial Section</b><br /> Enter the Coefficients and exponents of first polynomial expression</p>
+          <table>
+            <th>
+              <tr style="text-align: center">
+                <td>
+                  Coefficients
+                </td>
+                <td>
+                  Exponents
+                </td>
+              </tr>
+            </th>
+            <tr>
+              <td>
+                <input type="number" id="Coefficients1" name="1" onkeyup="manage(this)" />
+              </td>
+              <td>
+                <input type="number" id="Exponents1" name="1" onkeyup="manage(this)"/>
+              </td>
+            </tr>
+          </table>
+            <input type="button" id="1"  name="create_button" value="Create Node" class="option-button-small" onclick="createNode(this)" style="width: 20%; cursor:no-drop;" disabled/>
+            <input type="button" id="finish" value="Finish" class="option-button-small" onclick="finish_first();"/>
+        </div>
+        <div id="s_p_s" style="display:none; border-radius: 0%">
+            <p class="label info"><b>Second Polynomial Section</b><br /> Enter the coefficients and exponents of second polynomial expression</p>
+              <table>
+                <th>
+                  <tr style="text-align: center">
+                    <td>
+                      Coefficients
+                    </td>
+                    <td>
+                      Exponents
+                    </td>
+                  </tr>
+                </th>
+                <tr>
+                  <td>
+                    <input type="number" id="Coefficients2" name="2" onkeyup="manage(this)"/>
+                  </td>
+                  <td>
+                    <input type="number" id="Exponents2" name="2" onkeyup="manage(this)"/>
+                  </td>
+                </tr>
+              </table>
+              <div>
+                <input type="button"  value="Create Node" class="option-button-small" onclick="createNode(this)" id="2" style="width: 20%; cursor:no-drop;" disabled/>
+                <input type="button" value="Finish" class="option-button-small" onclick="finish_second();" id="finish2"/>
+              </div>
+          </div>
+        <div id="d_s" style="display: none; border-radius: 0%; ">
+          <p class="label info"><b>Decision Section</b><br />Observe the hightlighed node in the Linked List and choose an appropriate option from the dropdown.</p>
+          <div id="decision1"style="text-align: center;">
+            <span>Which condition satisfies the current linked list status?</span><br />
+            <select id="basic_condn" class="dropdown">
+              <option value="1">p & q both are not NULL</option>
+              <option value="2">p is NULL but q is not NULL</option>
+              <option value="3">q is NULL but p is not NULL</option>
+              <option value="4">p & q both are NULL</option>
+            </select>
+            <input class="option-button-small" style="padding: 5px;"  type="button" id="3" name="" value="Ok" onclick="next_section(this);" >
+          </div>
+            <br/>
+            <div id="decision2" style="text-align: center; display: none;" class="dropdown">
+              <span>Which condition satisfies the current linked list status for <br> <b>p & q both are not NULL </b>?</span>
+              <br>
+              <select class="dropdown" id="inner_condn">
+                <option value="1">p->exponent is equal to q->exponent</option>
+                <option value="2">p->exponent is greater than q->exponent</option>
+                <option value="3">p->exponent is less than q->exponent</option>
+              </select>
+
+              <input class="option-button-small" type="button" id="3" style="padding: 5px;" value="Ok" onclick="inner(this);">
+              <br>
+              <input id="Coefficients3" value="" style="display: none" />
+              <input id="Exponents3" value="" style="display: none">
+            </div>
+        </div>
+      </div>
+      <div class="column-canvas" style="width: 60%" id="canvas-area" >
+        <canvas id="myCanvas" width="800" height="480" style="display:block;border:0px solid #000000;border-radius: 0%;">
+        </canvas>
+      </div>
+    </div>
+
+  <script src="script.js"></script>
+  <script src="questions.js"></script>
+  </body>
+</html>
